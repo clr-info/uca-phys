@@ -1,0 +1,4 @@
+#sidebarMenu a{color:black;}
+#sidebarMenu .btn-group-vertical > label.active {color:white;background-color: black;}
+#sidebarMenu .btn-group-vertical{width: 100%;}
+#sidebarMenu .btn-group-vertical .dropdown-divider{height: 0;margin: .5rem 0;overflow: hidden;border-top: 2px solid #e9ecef;width: 100%;}

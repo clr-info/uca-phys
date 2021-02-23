@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="">
+<!-- idem index mais modEvent.js remplacé par une class dans menuevent.js -->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>p5.js example</title>
+
+  <script src="./p5/p5.js"></script>
+  <script src="./assets/js/menuevent.js"></script>
+  <script src="./assets/js/sketch2.js"></script>
+  <!-- Bootstrap core CSS -->
+  <link href="./assets/bs/css/bootstrap.min.css" rel="stylesheet">
+  <link href="./assets/css/dashboard.css" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="./assets/bs/js/bootstrap.bundle.min.js"></script>
+  <link href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <!-- <main>
+  </main> -->
+  <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+    <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="#">@lpc</a>
+    <button class="navbar-toggler d-md-none collapsed" type="button" data-toggle="collapse" data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </nav>
+  
+  <!-- Modals -->
+  <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="pointer-events: none;position: relative;">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="recipient-name" class="col-form-label">Recipient:</label>
+              <input type="text" class="form-control" id="recipient-name">
+            </div>
+            <div class="form-group">
+              <label for="message-text" class="col-form-label">Message:</label>
+              <textarea class="form-control" id="message-text"></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button id="closeBeam" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">OK</button>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  <!-- Modals -->
+
+  <div class="container-fluid">
+    <div class="row">
+      <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+        <div class="sidebar-sticky pt-3">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link active" href="./index.html">
+                <span data-feather="home"></span>
+                Dashboard <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">
+                <span data-feather="file"></span>
+                btn exemple
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./2p5.html">
+                <span data-feather="file"></span>
+                2 p5 exemple
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fa fa-plus"></i> ADD
+              </a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fa fa-plus"></i> ADD
+              </a>
+              <div class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdownMenuLink">
+                <div class="btn-group btn-group-toggle btn-group-vertical" data-toggle="buttons"> 
+                    <label class="btn"> 
+                        <input type="radio" name="radioButtonAdd" id="button1" value="value1" autocomplete="off"
+                            checked data-toggle="modal" data-target="#exampleModal" data-whatever="@Ray"> Ray
+                    </label> 
+          
+                    <label class="btn active">
+                        <input  id="okBeam" type="radio" name="radioButtonAdd" value="BEAMS" autocomplete="off" data-toggle="modal" data-target="#exampleModal" data-whatever="@Beam">
+                            Beam
+                    </label>
+          
+                    <label class="btn">
+                        <input type="radio" name="radioButtonAdd" id="couleur" value="couleur" autocomplete="off">
+                        color
+                    </label>
+
+                    <div class="dropdown-divider">&nbsp;</div>
+                    <a class="dropdown-item" href="#">-- Mirrors --</a>
+                    <label class="btn "> 
+                      <input type="radio" name="radioButtonAdd" id="button4"  value="value4" autocomplete="off">  
+                          Radio button 4 
+                    </label>
+                    <label class="btn "> 
+                      <input type="radio" name="radioButtonAdd" id="button5"  value="value5" autocomplete="off">  
+                          Radio button 5
+                    </label> 
+                </div>
+              </div> 
+            </li>
+          </ul>
+        </div>
+      </nav>
+  
+      <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col">
+              <h1 class="h2">Dashboard</h1>
+              <hr>
+            </div>
+          </div>
+
+          <div class="row h-100">
+            <div class="col">
+              <form id="configForm" class="form-inline">
+                <!-- <table class="table table-dark">
+                  <tr>
+                    <th>
+                      <h5>Group 2</h5>
+                    </th>
+                  </tr>
+                  <tr>
+                    <td>Product 3</td>
+                    <td >Small
+                      <input type="number" style="width: 45px;padding: 1px" value="0"> 
+                    </td>
+                    <td >Medium
+                      <input type="number" style="width: 45px;padding: 1px" value="0"> 
+                    </td>
+                    <td >Large
+                      <input type="number" style="width: 45px;padding: 1px" value="0"> 
+                    </td>
+                    <td >Ultra
+                      <input type="number" style="width: 45px;padding: 1px" value="0"> 
+                    </td>
+                    <td><button type="submit" class="btn btn-primary">Sign in</button></td>
+                  </tr>
+                </table> -->
+              </form>
+            </div>
+          </div>
+
+          <div class="row mt-2">
+            <div class="col">
+              <div class="card mb-2 mb-4 mb-6 border-dark">
+                <div class="card-header bg-dark text-white">
+                  P5 framework
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">A example</h5>
+                  <div id='myContainer' style="pointer-events: none;position: relative;"></div>
+                </div>
+                <div class="card-footer bg-info">
+                  <div id='myContainerFooterConfig'></div>
+                  <div id='myContainerBtn'></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+    <script src="./assets/js/util.js"></script>
+</body>
+
+</html>
